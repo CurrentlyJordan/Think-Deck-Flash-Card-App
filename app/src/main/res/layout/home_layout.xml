@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:text="Welcome to Think Deck"
+        android:gravity="center"
+        android:textSize="60sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="@color/color_main_blue"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Create flash cards and learn to study efficiently"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:gravity="center_horizontal"
+        android:textSize="25sp"
+        />
+
+</LinearLayout>

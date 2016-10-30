@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/new_deck_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add cards to your deck here."
+            android:layout_gravity="center"
+            android:layout_marginTop="26dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+        <EditText
+            android:id="@+id/clue_edit_text"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="your clue goes here."
+            />
+        <EditText
+            android:id="@+id/answer_edit_text"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:hint="your answer goes here."
+            />
+        <LinearLayout
+            android:paddingTop="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <Button
+                android:id="@+id/add_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:textColor="#FFFFFF"
+                android:text="ADD"
+                android:background="@drawable/rounded_corner_button"
+                android:textSize="20sp"/>
+            <Button
+                android:id="@+id/done_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:textColor="#FFFFFF"
+                android:text="DONE"
+                android:background="@drawable/rounded_corner_button"
+                android:textSize="20sp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
