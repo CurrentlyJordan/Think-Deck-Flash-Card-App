@@ -4,6 +4,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.io.Serializable;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,11 +26,12 @@ import nyc.c4q.jordansmith.thinkdeck.Model.Deck;
  * Created by jordansmith on 10/28/16.
  */
 
-public class ListOfDecksFragment extends Fragment {
+public class ListOfDecksFragment extends Fragment implements Serializable{
 
     List<Deck> deckList = new ArrayList<Deck>();
     RecyclerView listDecksRecyclerView;
     Deck deck;
+    FragmentManager fragmentManager;
 
     @Override
     public void onCreate( Bundle savedInstanceState) {
@@ -39,6 +42,7 @@ public class ListOfDecksFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
        View view = inflater.inflate(R.layout.list_decks_layout,container,false);
+        fragmentManager = getFragmentManager();
 
 
         if (this.getArguments() != null) {
@@ -105,7 +109,7 @@ public class ListOfDecksFragment extends Fragment {
 
         listDecksRecyclerView = (RecyclerView) view.findViewById(R.id.list_decks_recyclerview);
         listDecksRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        ListDeckAdapter adapter = new ListDeckAdapter(deckList);
+        ListDeckAdapter adapter = new ListDeckAdapter(fragmentManager,deckList);
         listDecksRecyclerView.setAdapter(adapter);
 
 
